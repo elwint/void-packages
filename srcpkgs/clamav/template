@@ -1,6 +1,6 @@
 # Template file for 'clamav'
 pkgname=clamav
-version=1.2.1
+version=1.4.2
 revision=1
 
 _configdir=/etc/clamav
