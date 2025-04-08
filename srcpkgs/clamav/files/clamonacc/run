@@ -1,4 +1,8 @@
 #!/bin/sh
 
 exec 2>&1
-exec clamonacc --foreground --fdpass 2>&1
+
+quarantinedir="/root/quarantine"
+
+[ ! -d "${quarantinedir}" ] && install -m 700 -d "${quarantinedir}"
+exec clamonacc --foreground --fdpass --wait --move="${quarantinedir}" 2>&1
