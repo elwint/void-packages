@@ -29,15 +29,6 @@
  
  # Stop daemon when libclamav reports out of memory condition.
  #ExitOnOOM yes
-@@ -706,7 +706,7 @@
- # Modifies fanotify blocking behaviour when handling permission events.
- # If off, fanotify will only notify if the file scanned is a virus,
- # and not perform any blocking.
--# Default: no
-+# Default: no (Void Linux does not support this option; setting this to 'yes' will do nothing)
- #OnAccessPrevention yes
- 
- # When using prevention, if this option is turned on, any errors that occur
 @@ -766,7 +766,7 @@
  # It has the same potential race condition limitations of the
  # OnAccessExcludeUID option.
